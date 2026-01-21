@@ -1,0 +1,12 @@
+.DS_Store
+.vscode/
+node_modules/
+.env
+# macOS
+.AppleDouble
+.LSOverride
+# Thumbnails
+Thumbs.db
+# Build
+dist/
+
