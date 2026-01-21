@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom — Plant Journal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --green: #4a7c59;
+            --green-light: #6b9b7a;
+            --cream: #fdfbf7;
+            --text: #2d2d2d;
+            --text-light: #5a5a5a;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--cream);
+        }
+
+        header {
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(74, 124, 89, 0.1);
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--green);
+            letter-spacing: -0.5px;
+        }
+
+        .tagline {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            margin-top: 0.25rem;
+        }
+
+        nav {
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            border-bottom: 1px solid rgba(74, 124, 89, 0.1);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: var(--green);
+        }
+
+        main {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--green);
+            margin-bottom: 1rem;
+            text-transform: lowercase;
+        }
+
+        p {
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style: none;
+            color: var(--text-light);
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "·";
+            position: absolute;
+            left: 0;
+            color: var(--green);
+        }
+
+        h3 {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+
+        a.email {
+            color: var(--green);
+            text-decoration: none;
+        }
+
+        a.email:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-light);
+            font-size: 0.8rem;
+            border-top: 1px solid rgba(74, 124, 89, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">🌱 Bloom</div>
+        <p class="tagline">a tiny plant journal</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="about">
+            <h2>about</h2>
+            <p>Bloom is a tiny, no‑nonsense plant journal built to help you notice and celebrate the slow, beautiful work of growing things. You tap to create an entry for a seedling, sapling, or bloom, add a short note and — only if you want — a photo.</p>
+            <p>The app focuses on simple, repeatable rituals: quick entries, clear growth stages, and a clean timeline so you can look back and see how a plant changed over weeks and months. Built‑in plant artwork and sensible defaults make it easy to log progress without fuss.</p>
+            <p>Everything you write stays on your device. Premium is optional and unlocks a few conveniences via Apple/RevenueCat.</p>
+        </section>
+
+        <section id="privacy">
+            <h2>privacy policy</h2>
+            
+            <h3>what we collect</h3>
+            <ul>
+                <li><strong>purchases:</strong> Apple (and RevenueCat) handle payments. We only get a confirmation so premium unlocks.</li>
+                <li><strong>photos:</strong> only if you add them to a journal entry.</li>
+            </ul>
+
+            <h3>what we don't collect</h3>
+            <ul>
+                <li><strong>your entries:</strong> they stay on your device. We don't read, upload, or sell them.</li>
+                <li><strong>personal info, trackers, or ads:</strong> none.</li>
+            </ul>
+
+            <h3>backups & deletes</h3>
+            <p>Backups are left to iCloud if you enable them. Deleting the app removes local data from that device. If you use iCloud Backup, an iCloud restore could bring old data back — to fully remove, delete the app and remove the device backup in iCloud settings.</p>
+        </section>
+
+        <section id="contact">
+            <h2>contact</h2>
+            <p>Questions? Reach out at <a class="email" href="mailto:kinshuk.sahni6@gmail.com">kinshuk.sahni6@gmail.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Bloom</p>
+    </footer>
+</body>
+</html>
