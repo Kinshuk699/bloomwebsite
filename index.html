@@ -37,7 +37,16 @@
             font-weight: 600;
             color: var(--green);
             letter-spacing: -0.5px;
+            display: inline-flex;
+            align-items: baseline;
         }
+
+            .logo img.logo-img {
+                height: 2.5rem;
+                margin-right: 0.5rem;
+                display: block;
+                align-self: baseline;
+            }
 
         .tagline {
             color: var(--text-light);
@@ -133,8 +142,8 @@
 </head>
 <body>
     <header>
-        <div class="logo">🌱 Bloom</div>
-        <p class="tagline">a tiny plant journal</p>
+        <div class="logo"><img src="cherryblossom.png" alt="cherry blossom" class="logo-img"> Bloom</div>
+        <p class="tagline">pixelated journal</p>
     </header>
 
     <nav>
@@ -146,9 +155,8 @@
     <main>
         <section id="about">
             <h2>about</h2>
-            <p>Bloom is a tiny, no‑nonsense plant journal built to help you notice and celebrate the slow, beautiful work of growing things. You tap to create an entry for a seedling, sapling, or bloom, add a short note and — only if you want — a photo.</p>
-            <p>The app focuses on simple, repeatable rituals: quick entries, clear growth stages, and a clean timeline so you can look back and see how a plant changed over weeks and months. Built‑in plant artwork and sensible defaults make it easy to log progress without fuss.</p>
-            <p>Everything you write stays on your device. Premium is optional and unlocks a few conveniences via Apple/RevenueCat.</p>
+            <p>Bloom started because I wanted a tiny place to notice plants without fuss. It is for the person who likes quiet routines and small turns of attention. Open the app, tap to add an entry, write a line or two, and move on. You can mark a seedling, a sapling, or a bloom and return later to see what happened between visits.</p>
+            <p>Design matters here in small ways. The interface is deliberately light so you do less tapping and more looking. Built in illustrations and clear growth stages mean you do not need to choose from a thousand options. The app asks for what matters and stays out of the rest. It is designed for keeping, not posting; for keeping a slow record of things that change with time.</p>
         </section>
 
         <section id="privacy">
