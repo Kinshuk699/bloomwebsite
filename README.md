@@ -1,3 +1,17 @@
-Privacy policy hub for apps by Kinshuk.
+Hi,
+I use this readme to update my fav list of songs-
 
-Currently links to Bloom and Sight: Detect & Navigate privacy policies.
+True Romance
+provider
+
+see you again- tyler the creator
+
+instantcrush
+
+cant stop- RHCP
+
+Tate (How I feel)
+
+Euphoria
+
+Ten Freaky Girls
