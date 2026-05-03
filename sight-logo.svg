@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Sight eye logo</title>
+  <desc id="desc">A gold eye surrounded by concentric rings on a dark background.</desc>
+  <rect width="512" height="512" rx="32" fill="#0b0b10"/>
+  <circle cx="256" cy="256" r="218" fill="none" stroke="#f3c85a" stroke-opacity="0.22" stroke-width="6"/>
+  <circle cx="256" cy="256" r="170" fill="none" stroke="#f3c85a" stroke-opacity="0.36" stroke-width="6"/>
+  <circle cx="256" cy="256" r="122" fill="none" stroke="#f3c85a" stroke-opacity="0.52" stroke-width="6"/>
+  <circle cx="256" cy="256" r="82" fill="url(#glow)" stroke="#f3c85a" stroke-opacity="0.22" stroke-width="4"/>
+  <path d="M144 256c31-42 68-63 112-63s81 21 112 63c-31 42-68 63-112 63s-81-21-112-63Z" fill="#f3c85a"/>
+  <path d="M184 256c20-26 44-39 72-39s52 13 72 39c-20 26-44 39-72 39s-52-13-72-39Z" fill="#0b0b10"/>
+  <circle cx="256" cy="256" r="33" fill="#ffe7a3"/>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#f3c85a" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#f3c85a" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+</svg>

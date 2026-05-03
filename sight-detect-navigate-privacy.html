@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sight: Detect &amp; Navigate Privacy Policy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --night: #0b0b10;
+            --night-soft: #111016;
+            --gold: #f3c85a;
+            --gold-soft: rgba(243, 200, 90, 0.16);
+            --text: #f7f4ec;
+            --muted: #c8c2b3;
+            --line: rgba(243, 200, 90, 0.18);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.65;
+            color: var(--text);
+            background:
+                radial-gradient(circle at 50% 12rem, rgba(243, 200, 90, 0.14), transparent 22rem),
+                var(--night);
+        }
+
+        #sight-canvas {
+            position: fixed;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        header,
+        main,
+        footer {
+            position: relative;
+            z-index: 1;
+        }
+
+        header,
+        main,
+        footer {
+            width: min(760px, calc(100% - 2rem));
+            margin: 0 auto;
+        }
+
+        header {
+            padding: 3rem 0 2rem;
+            text-align: center;
+        }
+
+        .back-link {
+            display: inline-block;
+            color: var(--muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+        }
+
+        .back-link:hover,
+        .back-link:focus-visible {
+            color: var(--gold);
+            outline: none;
+        }
+
+        .logo {
+            width: 8rem;
+            height: 8rem;
+            display: block;
+            margin: 0 auto 1.5rem;
+            filter: drop-shadow(0 0 34px rgba(243, 200, 90, 0.22));
+        }
+
+        h1 {
+            font-size: clamp(2rem, 7vw, 3.5rem);
+            line-height: 1.05;
+            letter-spacing: 0;
+            margin-bottom: 1rem;
+        }
+
+        .meta {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .tagline {
+            color: var(--muted);
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 1.4rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        nav a {
+            color: var(--muted);
+            font-size: 0.9rem;
+            text-decoration: none;
+        }
+
+        nav a:hover,
+        nav a:focus-visible {
+            color: var(--gold);
+            outline: none;
+        }
+
+        main {
+            padding-bottom: 3rem;
+        }
+
+        section {
+            padding: 1.5rem 0;
+            border-top: 1px solid var(--line);
+        }
+
+        h2 {
+            color: var(--gold);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.85rem;
+        }
+
+        p,
+        li,
+        td,
+        th {
+            color: var(--muted);
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        ul {
+            margin-left: 1.15rem;
+        }
+
+        li {
+            margin-bottom: 0.65rem;
+        }
+
+        strong {
+            color: var(--text);
+        }
+
+        a {
+            color: var(--gold);
+        }
+
+        .link-list {
+            list-style: none;
+            margin-left: 0;
+        }
+
+        .link-list li {
+            margin-bottom: 0.45rem;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 680px;
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        th,
+        td {
+            padding: 0.85rem;
+            text-align: left;
+            vertical-align: top;
+            border-bottom: 1px solid var(--line);
+        }
+
+        th {
+            color: var(--text);
+            font-weight: 600;
+            background: var(--gold-soft);
+        }
+
+        tr:last-child td {
+            border-bottom: 0;
+        }
+
+        footer {
+            color: var(--muted);
+            text-align: center;
+            font-size: 0.85rem;
+            padding: 2rem 0 3rem;
+            border-top: 1px solid var(--line);
+        }
+    </style>
+</head>
+<body>
+    <canvas id="sight-canvas" aria-hidden="true"></canvas>
+    <header>
+        <a class="back-link" href="index.html">All Policies</a>
+        <img class="logo" src="sight-logo.svg" alt="Sight eye logo">
+        <h1>Sight: Detect &amp; Navigate</h1>
+        <p class="tagline">LiDAR navigation assistant</p>
+        <p class="meta"><strong>Last updated:</strong> May 3, 2026<br><strong>Contact:</strong> <a href="mailto:support@wisdominurmovement.com">support@wisdominurmovement.com</a></p>
+        <nav aria-label="Sight page sections">
+            <a href="#about">About</a>
+            <a href="#privacy">Privacy</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>about</h2>
+            <p>Sight: Detect &amp; Navigate is a LiDAR-based navigation assistant for blind and low-vision users. It requires an iPhone with a LiDAR scanner, such as supported iPhone Pro models.</p>
+            <p>The app helps users move with spoken guidance, haptic feedback, walking directions, and obstacle awareness. It uses the camera and LiDAR sensor for real-time environmental awareness, and location for walking routes through Apple Maps.</p>
+            <p>It is free to use, and features such as object detection and LiDAR can be used offline. Once a route is set under the navigation tab, the entire app can function offline.</p>
+            <p>Camera and LiDAR processing happens on device. The app has no account, no ads, no analytics, no tracking, no in-app purchases, and no subscriptions.</p>
+            <p>Thank you for downloading the app!</p>
+            <ul class="link-list">
+                <li><strong>Privacy Policy:</strong> <a href="https://wisdominurmovement.com">https://wisdominurmovement.com</a></li>
+                <li><strong>Terms of Use (EULA):</strong> <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Standard EULA</a></li>
+            </ul>
+        </section>
+
+        <section id="privacy">
+            <h2>privacy policy</h2>
+            <p>Sight: Detect &amp; Navigate ("the app") is built and operated by Kinshuk ("we", "us"). This policy explains exactly what information the app handles, where it goes, and what your rights are.</p>
+        </section>
+
+        <section>
+            <h2>quick version</h2>
+            <ul>
+                <li><strong>Sight: Detect &amp; Navigate does not have a server.</strong> Camera frames, scene descriptions, settings, and onboarding state stay on your device.</li>
+                <li>We do not collect, store, sell, share, or transmit any personal data.</li>
+                <li>We have no analytics, no advertising, no tracking, no third-party SDKs of any kind.</li>
+                <li>The app is free, with no in-app purchases and no subscriptions.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>what the app accesses (and why)</h2>
+            <p>To work as a navigation aid for blind and low-vision users, Sight: Detect &amp; Navigate uses several iOS APIs. Camera, LiDAR, haptic feedback, settings, and onboarding state are processed <strong>on your device only</strong>. Location is used in memory and may be sent to Apple only when you use Apple Maps search, routing, or reverse-geocoding features.</p>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Permission</th>
+                            <th>What it does</th>
+                            <th>Where the data goes</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Camera + LiDAR</strong></td>
+                            <td>Detects nearby obstacles in real time using your iPhone Pro's depth sensor.</td>
+                            <td>Stays on device. Frames are processed in memory and discarded &mdash; never saved, never uploaded.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Location (GPS)</strong></td>
+                            <td>Powers walking turn-by-turn navigation, Free Roam street callouts, and the location announcement when you shake for your current location.</td>
+                            <td>Used in memory by Apple Maps' routing API and Apple's reverse-geocoding API. We do not store it.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Haptics</strong></td>
+                            <td>Vibration feedback for obstacle distance and turn confirmations.</td>
+                            <td>No data involved.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section>
+            <h2>data we store on your device</h2>
+            <p>The following is saved <strong>locally on your iPhone</strong> using Apple's SwiftData and UserDefaults:</p>
+            <ul>
+                <li>Your settings (voice on/off, haptic intensity, radar range, beacon enabled, callouts enabled, etc.)</li>
+                <li>Onboarding completion flag.</li>
+            </ul>
+            <p>You can erase all of it by deleting the app.</p>
+        </section>
+
+        <section>
+            <h2>third-party services</h2>
+            <p>The only network calls Sight: Detect &amp; Navigate makes go to Apple's own services, on your behalf, as part of normal iOS APIs:</p>
+            <ul>
+                <li><strong>Apple Maps (<code>MKLocalSearch</code>, <code>MKDirections</code>)</strong> &mdash; destination search and walking routes. Subject to <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.</li>
+                <li><strong>Apple's reverse-geocoder (<code>MKReverseGeocodingRequest</code>)</strong> &mdash; converts your GPS fix to a street name for callouts.</li>
+            </ul>
+            <p>We do not use Google, Facebook, Firebase, Mixpanel, Sentry, Crashlytics, or any analytics SDK. We do not have a backend at all.</p>
+        </section>
+
+        <section>
+            <h2>children</h2>
+            <p>Sight: Detect &amp; Navigate is rated 4+ and is suitable for all ages. We do not knowingly collect any data from anyone &mdash; including children.</p>
+        </section>
+
+        <section>
+            <h2>your rights</h2>
+            <p>Because we don't collect or store anything off your device, there is nothing for you to request, export, correct, or delete from us. Deleting the app removes all local data instantly.</p>
+        </section>
+
+        <section>
+            <h2>changes to this policy</h2>
+            <p>If anything ever changes (for example, if a future version adds a feature that requires a server), we will update this page and bump the "Last updated" date. We will never silently start collecting data.</p>
+        </section>
+
+        <section id="contact">
+            <h2>contact</h2>
+            <p>If you have any questions, accessibility feedback, or concerns:<br><strong><a href="mailto:support@wisdominurmovement.com">support@wisdominurmovement.com</a></strong></p>
+        </section>
+    </main>
+
+    <footer>© 2026 Sight: Detect &amp; Navigate</footer>
+
+    <script>
+        const canvas = document.getElementById('sight-canvas');
+        const context = canvas.getContext('2d');
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+        const state = {
+            width: 0,
+            height: 0,
+            progress: 0,
+        };
+
+        const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
+        const lerp = (start, end, t) => start + (end - start) * t;
+        const ease = (t) => 1 - Math.pow(1 - t, 3);
+
+        const resizeCanvas = () => {
+            const scale = window.devicePixelRatio || 1;
+            state.width = Math.floor(window.innerWidth * scale);
+            state.height = Math.floor(window.innerHeight * scale);
+            canvas.width = state.width;
+            canvas.height = state.height;
+            context.scale(scale, scale);
+            draw();
+        };
+
+        const getScrollProgress = () => {
+            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+            if (maxScroll <= 0) return 1;
+            return clamp(window.scrollY / maxScroll, 0, 1);
+        };
+
+        const drawSightEye = (progress) => {
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            const x = width * 0.5;
+            const y = height * 0.5;
+            const eased = ease(progress);
+            const eyeProgress = clamp((progress - 0.32) / 0.68, 0, 1);
+
+            context.clearRect(0, 0, width, height);
+
+            const glowRadius = lerp(34, Math.max(width, height) * 0.52, eased);
+            const glow = context.createRadialGradient(x, y, 0, x, y, glowRadius);
+            glow.addColorStop(0, `rgba(243, 200, 90, ${lerp(0.28, 0.16, eased)})`);
+            glow.addColorStop(0.45, `rgba(243, 200, 90, ${lerp(0.08, 0.05, eased)})`);
+            glow.addColorStop(1, 'rgba(243, 200, 90, 0)');
+            context.fillStyle = glow;
+            context.fillRect(0, 0, width, height);
+
+            context.fillStyle = `rgba(243, 200, 90, ${lerp(0.5, 0.14, eased)})`;
+            context.beginPath();
+            context.arc(x, y, lerp(6, 28, clamp(progress / 0.35, 0, 1)), 0, Math.PI * 2);
+            context.fill();
+
+            for (let i = 0; i < 4; i += 1) {
+                const ringStart = i * 0.08;
+                const ringProgress = clamp((progress - ringStart) / 0.9, 0, 1);
+                const radius = lerp(14, 76 + i * 54, ease(ringProgress));
+                context.strokeStyle = `rgba(243, 200, 90, ${0.08 + ringProgress * 0.1})`;
+                context.lineWidth = lerp(1, 3, ringProgress);
+                context.beginPath();
+                context.arc(x, y, radius, 0, Math.PI * 2);
+                context.stroke();
+            }
+
+            if (eyeProgress <= 0) return;
+
+            const opened = ease(eyeProgress);
+            const eyeWidth = lerp(28, 190, opened);
+            const eyeHeight = lerp(8, 62, opened);
+            const pupilRadius = lerp(4, 26, opened);
+
+            context.globalAlpha = lerp(0.14, 0.46, opened);
+            context.fillStyle = '#f3c85a';
+            context.beginPath();
+            context.moveTo(x - eyeWidth * 0.5, y);
+            context.bezierCurveTo(x - eyeWidth * 0.25, y - eyeHeight, x + eyeWidth * 0.25, y - eyeHeight, x + eyeWidth * 0.5, y);
+            context.bezierCurveTo(x + eyeWidth * 0.25, y + eyeHeight, x - eyeWidth * 0.25, y + eyeHeight, x - eyeWidth * 0.5, y);
+            context.closePath();
+            context.fill();
+
+            context.fillStyle = '#0b0b10';
+            context.beginPath();
+            context.ellipse(x, y, eyeWidth * 0.26, eyeHeight * 0.46, 0, 0, Math.PI * 2);
+            context.fill();
+
+            context.fillStyle = '#ffe7a3';
+            context.beginPath();
+            context.arc(x, y, pupilRadius, 0, Math.PI * 2);
+            context.fill();
+            context.globalAlpha = 1;
+        };
+
+        const draw = () => {
+            state.progress = prefersReducedMotion.matches ? 1 : getScrollProgress();
+            drawSightEye(state.progress);
+        };
+
+        const onScroll = () => window.requestAnimationFrame(draw);
+
+        window.addEventListener('resize', resizeCanvas);
+        window.addEventListener('scroll', onScroll, { passive: true });
+        prefersReducedMotion.addEventListener('change', draw);
+
+        resizeCanvas();
+        draw();
+    </script>
+</body>
+</html>

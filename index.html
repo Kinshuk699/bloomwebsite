@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloom — Plant Journal</title>
+    <title>Kinshuk Apps — Privacy Policies</title>
     <style>
         * {
             margin: 0;
@@ -12,397 +12,270 @@
         }
 
         :root {
-            --green: #4a7c59;
-            --green-light: #6b9b7a;
             --cream: #fdfbf7;
-            --text: #2d2d2d;
-            --text-light: #5a5a5a;
+            --paper: #fffefa;
+            --ink: #202124;
+            --muted: #5f6368;
+            --line: rgba(32, 33, 36, 0.12);
+            --green: #4a7c59;
+            --gold: #f3c85a;
+            --night: #0b0b10;
         }
 
         body {
+            min-height: 100vh;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at 14% 18%, rgba(107, 155, 122, 0.12), transparent 28rem),
+                radial-gradient(circle at 84% 76%, rgba(243, 200, 90, 0.12), transparent 24rem),
+                var(--cream);
             line-height: 1.6;
-            color: var(--text);
-            background-color: var(--cream);
-        }
-
-        #growth-canvas {
-            position: fixed;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        header,
-        nav,
-        main,
-        footer {
-            position: relative;
-            z-index: 1;
-        }
-
-        header {
-            padding: 2rem;
-            text-align: center;
-            border-bottom: 1px solid rgba(74, 124, 89, 0.1);
-        }
-
-        .logo {
-            font-size: 2rem;
-            font-weight: 600;
-            color: var(--green);
-            letter-spacing: -0.5px;
-            display: inline-flex;
-            align-items: baseline;
-        }
-
-            .logo img.logo-img {
-                height: 2.5rem;
-                margin-right: 0.5rem;
-                display: block;
-                align-self: baseline;
-            }
-
-        .tagline {
-            color: var(--text-light);
-            font-size: 0.95rem;
-            margin-top: 0.25rem;
-        }
-
-        nav {
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            border-bottom: 1px solid rgba(74, 124, 89, 0.1);
-        }
-
-        nav a {
-            text-decoration: none;
-            color: var(--text-light);
-            font-size: 0.9rem;
-            transition: color 0.2s ease;
-        }
-
-        nav a:hover {
-            color: var(--green);
         }
 
         main {
-            max-width: 640px;
+            width: min(720px, calc(100% - 2rem));
             margin: 0 auto;
-            padding: 3rem 2rem;
+            padding: 18vh 0 12vh;
         }
 
-        section {
-            margin-bottom: 3rem;
+        h1 {
+            font-size: clamp(2.2rem, 8vw, 4.8rem);
+            line-height: 1;
+            letter-spacing: 0;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
         }
 
-        h2 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--green);
-            margin-bottom: 1rem;
-            text-transform: lowercase;
-        }
-
-        p {
-            color: var(--text-light);
-            margin-bottom: 1rem;
-        }
-
-        ul {
-            list-style: none;
-            color: var(--text-light);
-        }
-
-        ul li {
-            margin-bottom: 0.5rem;
-            padding-left: 1rem;
-            position: relative;
-        }
-
-        ul li::before {
-            content: "·";
-            position: absolute;
-            left: 0;
-            color: var(--green);
-        }
-
-        h3 {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: var(--text);
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-        }
-
-        a.email {
+        h1 a {
             color: var(--green);
             text-decoration: none;
         }
 
-        a.email:hover {
+        h1 a:hover,
+        h1 a:focus-visible {
             text-decoration: underline;
+            text-decoration-thickness: 0.08em;
+            text-underline-offset: 0.12em;
+            outline: none;
+        }
+
+        .intro {
+            max-width: 620px;
+            color: var(--muted);
+            font-size: 1.05rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .policy-list {
+            display: grid;
+            gap: 0.85rem;
+        }
+
+        .policy-link {
+            display: grid;
+            grid-template-columns: 3.2rem minmax(0, 1fr) auto;
+            align-items: center;
+            gap: 1rem;
+            min-height: 5.4rem;
+            padding: 1rem 1.1rem;
+            color: var(--ink);
+            background: rgba(255, 254, 250, 0.78);
+            border: 1px solid var(--line);
+            border-radius: 8px;
+            text-decoration: none;
+            transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+        }
+
+        .policy-link:hover,
+        .policy-link:focus-visible {
+            transform: translateY(-2px);
+            border-color: rgba(32, 33, 36, 0.22);
+            box-shadow: 0 18px 42px rgba(32, 33, 36, 0.1);
+            outline: none;
+        }
+
+        .policy-link strong {
+            display: block;
+            font-size: 1.05rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .policy-link span {
+            display: block;
+            color: var(--muted);
+            font-size: 0.9rem;
+        }
+
+        .icon-wrap {
+            width: 3.2rem;
+            height: 3.2rem;
+            display: grid;
+            place-items: center;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #f7f1e8;
+        }
+
+        .icon-wrap img {
+            display: block;
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        .icon-wrap.sight {
+            background: var(--night);
+            box-shadow: inset 0 0 0 1px rgba(243, 200, 90, 0.2);
+        }
+
+        .arrow {
+            color: var(--muted);
+            font-size: 1.35rem;
+            line-height: 1;
         }
 
         footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-light);
-            font-size: 0.8rem;
-            border-top: 1px solid rgba(74, 124, 89, 0.1);
+            color: var(--muted);
+            font-size: 0.82rem;
+            margin-top: 2rem;
+        }
+
+        .personal-note,
+        .project-log {
+            margin-top: 2.75rem;
+            padding-top: 1.65rem;
+            border-top: 1px solid var(--line);
+        }
+
+        .personal-note h2,
+        .project-log h2 {
+            color: var(--green);
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 0.9rem;
+            text-transform: lowercase;
+        }
+
+        .personal-note p,
+        .project-log p {
+            color: var(--muted);
+            margin-bottom: 1rem;
+        }
+
+        .project-log ol {
+            list-style: none;
+            display: grid;
+            gap: 0.8rem;
+        }
+
+        .project-log li {
+            display: grid;
+            grid-template-columns: 7rem minmax(0, 1fr);
+            gap: 1rem;
+            color: var(--muted);
+        }
+
+        .project-log time {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        .project-log a {
+            color: var(--green);
+            text-decoration: none;
+        }
+
+        .project-log a:hover,
+        .project-log a:focus-visible {
+            text-decoration: underline;
+            outline: none;
+        }
+
+        @media (max-width: 540px) {
+            main {
+                padding-top: 12vh;
+            }
+
+            .policy-link {
+                grid-template-columns: 2.75rem minmax(0, 1fr);
+                align-items: start;
+            }
+
+            .icon-wrap {
+                width: 2.75rem;
+                height: 2.75rem;
+            }
+
+            .arrow {
+                display: none;
+            }
+
+            .project-log li {
+                grid-template-columns: 1fr;
+                gap: 0.15rem;
+            }
         }
     </style>
 </head>
 <body>
-    <canvas id="growth-canvas" aria-hidden="true"></canvas>
-    <header>
-        <div class="logo"><img src="cherryblossom.png" alt="cherry blossom" class="logo-img"> Bloom</div>
-        <p class="tagline">pixelated journal</p>
-    </header>
-
-    <nav>
-        <a href="#about">About</a>
-        <a href="#privacy">Privacy</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
     <main>
-        <section id="about">
-            <h2>about</h2>
-            <p>Bloom is a cozy journaling app that turns your day into a flower. You pick how you are feeling, write your memory, add a song, and optionally add a photo. As you add more, your flower grows from Seed to Sapling to Bloom.</p>
-            <p>Over time, all your days collect into a Garden you can tap through to revisit past entries. The long term goal is to collect every flower, and it is not easy. Bloom is meant to feel simple, gentle, and a little game-like, so showing up each day feels natural.</p>
+        <h1>Hi, I'm <a href="https://kinshuksahni.com/"><span>Kinshuk</span></a>.</h1>
+        <p class="intro">I build small apps and creative projects in my free time, usually around ideas that help people or let me explore something new.</p>
+
+        <nav class="policy-list" aria-label="Privacy policies">
+            <a class="policy-link" href="bloom-privacy.html">
+                <span class="icon-wrap"><img src="cherryblossom.png" alt="" aria-hidden="true"></span>
+                <span>
+                    <strong>Bloom Privacy Policy</strong>
+                    <span>Pixelated journal</span>
+                </span>
+                <span class="arrow" aria-hidden="true">›</span>
+            </a>
+
+            <a class="policy-link" href="sight-detect-navigate-privacy.html">
+                <span class="icon-wrap sight"><img src="sight-logo.svg" alt="" aria-hidden="true"></span>
+                <span>
+                    <strong>Sight: Detect &amp; Navigate Privacy Policy</strong>
+                    <span>Navigation aid for blind and low-vision users</span>
+                </span>
+                <span class="arrow" aria-hidden="true">›</span>
+            </a>
+        </nav>
+
+        <section class="personal-note" aria-labelledby="why-build">
+            <h2 id="why-build">why I build</h2>
+            <p>I think AI is most useful when it gives people time back: less time on mundane tasks, more room for creative interests, spending time outdoors, and reconnecting with nature.</p>
+            <p>I also love when it helps creative people who are not deeply technical yet have ideas they want to bring to life. Outside of work, I am usually on a football pitch or volunteering.</p>
         </section>
 
-        <section id="privacy">
-            <h2>privacy policy</h2>
-            
-            <h3>what we collect</h3>
-            <ul>
-                <li><strong>purchases:</strong> Apple (and RevenueCat) handle payments. We only get a confirmation so premium unlocks.</li>
-                <li><strong>photos:</strong> only photos you add to a journal entry are stored locally on your device. we do not upload, read, or analyze them unless you explicitly add them.</li>
-            </ul>
-
-            <h3>what we don't collect</h3>
-            <ul>
-                <li><strong>your entries:</strong> they stay on your device. We don't read, upload, or sell them.</li>
-                <li><strong>personal info, trackers, or ads:</strong> none.</li>
-            </ul>
-
-            <h3>backups & deletes</h3>
-            <p>Backups are left to iCloud if you enable them. Deleting the app removes local data from that device. If you use iCloud Backup, an iCloud restore could bring old data back — to fully remove, delete the app and remove the device backup in iCloud settings.</p>
+        <section class="project-log" aria-labelledby="project-log-title">
+            <h2 id="project-log-title">2026 project log</h2>
+            <p>This year, I want to create something meaningful every month.</p>
+            <ol>
+                <li>
+                    <time datetime="2026-01">Jan 2026</time>
+                    <span>Released <strong>Bloom: Your Pixel Journal</strong> on the App Store.</span>
+                </li>
+                <li>
+                    <time datetime="2026-02">Feb 2026</time>
+                    <span>Launched <a href="https://kinshuksahni.com/">kinshuksahni.com</a>, built <a href="https://willyoubemyclementine.com/">willyoubemyclementine.com</a> for my dad's Valentine's plan, and built <a href="https://revslot.onrender.com/">RevSlot</a> for a 48-hour hackathon.</span>
+                </li>
+                <li>
+                    <time datetime="2026-03">March 2026</time>
+                    <span>Built <strong>BehaveV3.0</strong> as a capstone project, inspired by learnings from <a href="https://arxiv.org/abs/2304.03442">this paper</a>, and I am working on it so it can be tested with real data.</span>
+                </li>
+                <li>
+                    <time datetime="2026-04">April 2026</time>
+                    <span>Built <strong>Sight: Detect &amp; Navigate</strong> for blind and low-vision users.</span>
+                </li>
+                <li>
+                    <time datetime="2026-05">May 2026</time>
+                    <span>In progress.</span>
+                </li>
+            </ol>
         </section>
 
-        <section id="contact">
-            <h2>contact</h2>
-            <p>Questions? Reach out at <a class="email" href="mailto:support@wisdominurmovement.com">support@wisdominurmovement.com</a></p>
-        </section>
+        <footer>© 2026 Kinshuk</footer>
     </main>
-
-    <footer>
-        <p>© 2026 Bloom</p>
-    </footer>
-
-    <script>
-        const canvas = document.getElementById('growth-canvas');
-        const context = canvas.getContext('2d');
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-
-        const state = {
-            width: 0,
-            height: 0,
-            progress: 0,
-            seedHue: 120,
-        };
-
-        const clamp = (value, min, max) => Math.min(Math.max(value, min), max);
-        const lerp = (start, end, t) => start + (end - start) * t;
-        const ease = (t) => 1 - Math.pow(1 - t, 3);
-
-        const resizeCanvas = () => {
-            const scale = window.devicePixelRatio || 1;
-            state.width = Math.floor(window.innerWidth * scale);
-            state.height = Math.floor(window.innerHeight * scale);
-            canvas.width = state.width;
-            canvas.height = state.height;
-            context.scale(scale, scale);
-            draw();
-        };
-
-        const getScrollProgress = () => {
-            const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
-            if (maxScroll <= 0) return 1;
-            return clamp(window.scrollY / maxScroll, 0, 1);
-        };
-
-        const drawSeed = (x, y, size) => {
-            const seedWidth = size * 1.4;
-            const seedHeight = size * 0.9;
-            const gradient = context.createLinearGradient(x - seedWidth, y - seedHeight, x + seedWidth, y + seedHeight);
-            gradient.addColorStop(0, 'rgba(140, 110, 70, 0.55)');
-            gradient.addColorStop(1, 'rgba(93, 72, 48, 0.6)');
-            context.fillStyle = gradient;
-            context.beginPath();
-            context.ellipse(x, y, seedWidth, seedHeight, -0.4, 0, Math.PI * 2);
-            context.fill();
-
-            context.fillStyle = 'rgba(255, 255, 255, 0.25)';
-            context.beginPath();
-            context.ellipse(x - seedWidth * 0.3, y - seedHeight * 0.2, seedWidth * 0.25, seedHeight * 0.2, -0.2, 0, Math.PI * 2);
-            context.fill();
-        };
-
-        const drawStem = (x, baseY, length, thickness) => {
-            const curveOffset = length * 0.2;
-            context.strokeStyle = 'rgba(74, 124, 89, 0.55)';
-            context.lineWidth = thickness;
-            context.lineCap = 'round';
-            context.beginPath();
-            context.moveTo(x, baseY);
-            context.bezierCurveTo(
-                x - curveOffset,
-                baseY - length * 0.4,
-                x + curveOffset,
-                baseY - length * 0.7,
-                x,
-                baseY - length
-            );
-            context.stroke();
-        };
-
-        const drawLeaves = (x, y, size, spread) => {
-            context.fillStyle = 'rgba(107, 155, 122, 0.5)';
-            context.beginPath();
-            context.ellipse(x - spread, y, size, size * 0.6, -0.6, 0, Math.PI * 2);
-            context.ellipse(x + spread, y, size, size * 0.6, 0.6, 0, Math.PI * 2);
-            context.fill();
-        };
-
-        const drawFlower = (x, y, size, bloomProgress) => {
-            const petals = 6;
-            const baseSize = size * lerp(0.45, 1, bloomProgress);
-
-            // soft petal gradient (light center to richer edges)
-            const petalGradientInner = 'rgba(255, 244, 247, 0.9)';
-            const petalGradientMid = 'rgba(244, 164, 193, 0.75)';
-            const petalGradientEdge = 'rgba(177, 214, 190, 0.45)';
-
-            for (let i = 0; i < petals; i += 1) {
-                const angle = (Math.PI * 2 * i) / petals;
-                const petalLength = baseSize * 1.25;
-                const petalWidth = baseSize * 0.6;
-                const offset = baseSize * 0.35;
-
-                context.save();
-                context.translate(x + Math.cos(angle) * offset, y + Math.sin(angle) * offset);
-                context.rotate(angle);
-
-                // petal shape: pointed teardrop using bezier curves
-                context.beginPath();
-                context.moveTo(0, 0);
-                context.bezierCurveTo(petalWidth * 0.18, -petalLength * 0.35, petalWidth * 0.95, -petalLength * 0.75, 0, -petalLength);
-                context.bezierCurveTo(-petalWidth * 0.95, -petalLength * 0.75, -petalWidth * 0.18, -petalLength * 0.35, 0, 0);
-                context.closePath();
-
-                // layered fills to give depth
-                context.save();
-                context.clip();
-                // subtle inner light
-                const g1 = context.createLinearGradient(0, -petalLength, 0, 0);
-                g1.addColorStop(0, petalGradientInner);
-                g1.addColorStop(0.6, petalGradientMid);
-                g1.addColorStop(1, petalGradientEdge);
-                context.fillStyle = g1;
-                context.fill();
-
-                // soft darker rim
-                context.lineWidth = Math.max(0.8, baseSize * 0.04);
-                context.strokeStyle = 'rgba(120,140,120,0.12)';
-                context.stroke();
-                context.restore();
-
-                context.restore();
-            }
-
-            // small central disk
-            context.fillStyle = 'rgba(255, 245, 200, 0.95)';
-            context.beginPath();
-            context.arc(x, y, baseSize * 0.28, 0, Math.PI * 2);
-            context.fill();
-
-            // tiny inner seed specks for texture
-            context.fillStyle = 'rgba(150,120,80,0.12)';
-            for (let s = 0; s < 6; s++) {
-                const a = (Math.PI * 2 * s) / 6 + 0.2;
-                const r = baseSize * 0.18;
-                context.beginPath();
-                context.arc(x + Math.cos(a) * r * 0.35, y + Math.sin(a) * r * 0.35, baseSize * 0.035, 0, Math.PI * 2);
-                context.fill();
-            }
-        };
-
-        const drawRadiance = (strength) => {
-            if (strength <= 0) return;
-            const gradient = context.createRadialGradient(
-                window.innerWidth * 0.5,
-                window.innerHeight * 0.4,
-                0,
-                window.innerWidth * 0.5,
-                window.innerHeight * 0.4,
-                Math.max(window.innerWidth, window.innerHeight)
-            );
-            gradient.addColorStop(0, `rgba(244, 164, 193, ${0.25 * strength})`);
-            gradient.addColorStop(0.45, `rgba(107, 155, 122, ${0.18 * strength})`);
-            gradient.addColorStop(1, 'rgba(253, 251, 247, 0)');
-            context.fillStyle = gradient;
-            context.fillRect(0, 0, window.innerWidth, window.innerHeight);
-        };
-
-        const draw = () => {
-            const width = window.innerWidth;
-            const height = window.innerHeight;
-            context.clearRect(0, 0, width, height);
-
-            const progress = prefersReducedMotion.matches ? 1 : state.progress;
-            const eased = ease(progress);
-            const seedY = height * 0.78;
-            const stemLength = height * lerp(0.02, 0.42, eased);
-            const stemThickness = lerp(2, 6, eased);
-            const stemTop = seedY - stemLength;
-
-            drawRadiance(clamp((progress - 0.7) / 0.3, 0, 1));
-            drawSeed(width * 0.5, seedY, lerp(7, 13, eased));
-            if (progress > 0.08) {
-                drawStem(width * 0.5, seedY, stemLength, stemThickness);
-            }
-
-            if (progress > 0.25) {
-                const leafProgress = clamp((progress - 0.25) / 0.4, 0, 1);
-                drawLeaves(width * 0.5, stemTop + height * 0.18, 14 * leafProgress, 20 * leafProgress);
-            }
-
-            if (progress > 0.55) {
-                const bloomProgress = clamp((progress - 0.55) / 0.45, 0, 1);
-                drawFlower(width * 0.5, stemTop - height * 0.04, 38 * bloomProgress, bloomProgress);
-            }
-        };
-
-        const update = () => {
-            state.progress = getScrollProgress();
-            draw();
-        };
-
-        const onScroll = () => window.requestAnimationFrame(update);
-
-        window.addEventListener('resize', resizeCanvas);
-        window.addEventListener('scroll', onScroll, { passive: true });
-        prefersReducedMotion.addEventListener('change', update);
-
-        resizeCanvas();
-        update();
-    </script>
 </body>
 </html>
