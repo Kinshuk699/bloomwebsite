@@ -140,15 +140,13 @@
             margin-top: 2rem;
         }
 
-        .personal-note,
-        .project-log {
+        .personal-note {
             margin-top: 2.75rem;
             padding-top: 1.65rem;
             border-top: 1px solid var(--line);
         }
 
-        .personal-note h2,
-        .project-log h2 {
+        .personal-note h2 {
             color: var(--green);
             font-size: 0.95rem;
             font-weight: 600;
@@ -156,39 +154,9 @@
             text-transform: lowercase;
         }
 
-        .personal-note p,
-        .project-log p {
+        .personal-note p {
             color: var(--muted);
             margin-bottom: 1rem;
-        }
-
-        .project-log ol {
-            list-style: none;
-            display: grid;
-            gap: 0.8rem;
-        }
-
-        .project-log li {
-            display: grid;
-            grid-template-columns: 7rem minmax(0, 1fr);
-            gap: 1rem;
-            color: var(--muted);
-        }
-
-        .project-log time {
-            color: var(--ink);
-            font-weight: 600;
-        }
-
-        .project-log a {
-            color: var(--green);
-            text-decoration: none;
-        }
-
-        .project-log a:hover,
-        .project-log a:focus-visible {
-            text-decoration: underline;
-            outline: none;
         }
 
         @media (max-width: 540px) {
@@ -210,10 +178,6 @@
                 display: none;
             }
 
-            .project-log li {
-                grid-template-columns: 1fr;
-                gap: 0.15rem;
-            }
         }
     </style>
 </head>
@@ -245,34 +209,6 @@
         <section class="personal-note" aria-labelledby="why-build">
             <h2 id="why-build">why I build</h2>
             <p>I think AI is most useful when it gives people time back: less time on mundane tasks, more room for creative interests, spending time outdoors, and reconnecting with nature.</p>
-            <p>I also love when it helps creative people who are not deeply technical yet have ideas they want to bring to life. Outside of work, I am usually on a football pitch or volunteering.</p>
-        </section>
-
-        <section class="project-log" aria-labelledby="project-log-title">
-            <h2 id="project-log-title">2026 project log</h2>
-            <p>This year, I want to create something meaningful every month.</p>
-            <ol>
-                <li>
-                    <time datetime="2026-01">Jan 2026</time>
-                    <span>Released <strong>Bloom: Your Pixel Journal</strong> on the App Store.</span>
-                </li>
-                <li>
-                    <time datetime="2026-02">Feb 2026</time>
-                    <span>Launched <a href="https://kinshuksahni.com/">kinshuksahni.com</a>, built <a href="https://willyoubemyclementine.com/">willyoubemyclementine.com</a> for my dad's Valentine's plan, and built <a href="https://revslot.onrender.com/">RevSlot</a> for a 48-hour hackathon.</span>
-                </li>
-                <li>
-                    <time datetime="2026-03">March 2026</time>
-                    <span>Built <strong>BehaveV3.0</strong> as a capstone project, inspired by learnings from <a href="https://arxiv.org/abs/2304.03442">this paper</a>, and I am working on it so it can be tested with real data.</span>
-                </li>
-                <li>
-                    <time datetime="2026-04">April 2026</time>
-                    <span>Built <strong>Sight: Detect &amp; Navigate</strong> for blind and low-vision users.</span>
-                </li>
-                <li>
-                    <time datetime="2026-05">May 2026</time>
-                    <span>In progress.</span>
-                </li>
-            </ol>
         </section>
 
         <footer>© 2026 Kinshuk</footer>
