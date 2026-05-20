@@ -1,8 +1,11 @@
 Hi,
 I use this readme to update my fav list of songs-
 
-True Romance
-provider
+True Romance- oh wonder
+
+
+
+provider- frank ocean
 
 see you again- tyler the creator
 
@@ -15,3 +18,7 @@ Tate (How I feel)
 Euphoria
 
 Ten Freaky Girls
+
+janice stfu
+
+
