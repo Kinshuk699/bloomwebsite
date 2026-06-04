@@ -1,7 +1,9 @@
 Hi,
-I created this repo for my website that contains the privacy policy of the 2 apps i created- Bloom and Sight
+I created this repo for my website that contains the privacy policy of the 2 apps i created- Bloom and SEYEght.
 
-oh and this readme is solely for maintaing a list of top 10 fav songs(currently) and the time they take me back to when i hear them.
+This readme is solely for maintaing a list of my 11 fav songs(currently) and the time they take me back to when i hear them.
+
+0)trance-metro x drake x travis (june 2026)
 
 1)true Romance- oh wonder (june 2024) 
 
